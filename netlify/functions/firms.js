@@ -55,7 +55,7 @@ exports.handler = async function (event) {
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "public, max-age=900"
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify({ points: data })
     };
 
   } catch (error) {
