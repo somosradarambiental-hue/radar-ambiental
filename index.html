@@ -1,64 +1,2333 @@
 <!DOCTYPE html>
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Radar Ambiental · Observar el ambiente. Cuestionar el sistema.</title><style>
-:root{--bg:#f8f7f4;--ink:#252437;--muted:#6c6b76;--purple:#7658c4;--pale:#eee9fa;--line:#e5e2e9;--dark:#28233d}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,select{font:inherit}button{cursor:pointer}a{color:inherit}.shell{max-width:1210px;margin:auto;padding:0 28px}.top{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:20}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:850;letter-spacing:-.065em;font-size:22px;white-space:nowrap}.logo span{color:var(--purple)}.tabs{display:flex;gap:6px;align-items:center}.tab{border:0;background:transparent;color:#5f5c6a;padding:12px 17px;border-radius:30px;font-size:14px;font-weight:650}.tab.active{background:var(--dark);color:white}.nav-end{font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}.page{display:none}.page.active{display:block}.eyebrow{font-size:11px;letter-spacing:.19em;font-weight:800;color:var(--purple);text-transform:uppercase}.hero{padding:80px 0 66px;display:grid;grid-template-columns:1.08fr .92fr;gap:45px;align-items:center}.hero h1{font-family:Georgia,serif;font-weight:400;letter-spacing:-.052em;line-height:1.02;font-size:clamp(54px,6vw,89px);margin:20px 0 25px}.hero h1 em{font-style:normal;color:var(--purple)}.lead{font-size:18px;line-height:1.7;color:#595768;max-width:570px}.tagline{display:inline-flex;margin-top:22px;align-items:center;gap:10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;border-top:1px solid var(--line);padding-top:20px}.visual{height:475px;position:relative;overflow:hidden;background:#e8e2ef;border-radius:4px}.visual:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 65% 25%,#c2a8d6 0,transparent 42%),radial-gradient(ellipse at 20% 75%,#8f98a0 0,transparent 45%),linear-gradient(135deg,#c5c9c5,#e9e0d5 52%,#b1b6b1);filter:contrast(1.07)}.visual svg{position:absolute;inset:0;width:100%;height:100%;opacity:.95}.visual-label{position:absolute;left:22px;bottom:22px;right:22px;background:#ffffffdf;backdrop-filter:blur(10px);padding:17px 19px;display:flex;justify-content:space-between;gap:12px;font-size:12px}.visual-label strong{display:block;font-size:13px}.section{padding:70px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:26px}.section h2,.subhero h1{font-family:Georgia,serif;font-weight:400;letter-spacing:-.045em;font-size:clamp(38px,4vw,58px);line-height:1.12;margin:12px 0}.section-head p{max-width:440px;color:var(--muted);line-height:1.7}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.story{background:white;border:1px solid var(--line);overflow:hidden;min-width:0}.story .art{height:190px;position:relative;overflow:hidden}.art.fire{background:linear-gradient(135deg,#b2a7aa,#4e5454 60%,#e1a66f)}.art.water{background:linear-gradient(145deg,#c8d7d6,#667f87 55%,#9e91ad)}.art.connect{background:linear-gradient(135deg,#d5cadc,#9b9ca9 50%,#ddd6c6)}.art svg{width:100%;height:100%;position:absolute;inset:0}.story-body{padding:24px}.story h3{font-family:Georgia,serif;font-size:26px;font-weight:400;margin:12px 0}.story p{font-size:14px;color:var(--muted);line-height:1.65}.story button,.linkbtn{border:0;background:none;color:var(--purple);font-weight:800;font-size:13px;padding:0}.manifesto{background:var(--dark);color:white;padding:58px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.manifesto h2{color:white}.manifesto p{color:#d5d0df;line-height:1.8}.footer{border-top:1px solid var(--line);padding:28px 0 45px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}.subhero{padding:64px 0 32px;border-bottom:1px solid var(--line)}.subhero p{max-width:730px;color:var(--muted);font-size:17px;line-height:1.7}.notice{margin:30px 0;padding:22px 25px;border-left:3px solid var(--purple);background:var(--pale);font-size:14px;line-height:1.7}.controls{display:flex;flex-wrap:wrap;gap:16px;align-items:end;margin:26px 0}.field{display:grid;gap:7px;font-size:12px;font-weight:750;color:#575367}.field select{background:white;border:1px solid #d8d2df;padding:12px 35px 12px 13px;min-width:160px;color:var(--ink)}.btn{background:var(--dark);color:white;border:0;padding:13px 22px;font-weight:700;font-size:13px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:20px 0}.metric{background:white;border:1px solid var(--line);padding:22px}.metric small{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}.metric strong{display:block;font-size:29px;letter-spacing:-.05em;margin-top:9px}.metric p{font-size:12px;color:var(--muted)}.chartgrid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px;margin:20px 0}.panel{background:white;border:1px solid var(--line);padding:25px;min-width:0}.panel h3{font-size:17px;margin:0 0 6px}.panel p{font-size:12px;color:var(--muted);line-height:1.6}.plot{width:100%;height:240px;display:block}.map-demo{height:300px;background:#e9e9e4;position:relative;overflow:hidden}.map-demo svg{height:100%;width:100%}.map-overlay{position:absolute;bottom:12px;left:12px;background:#fffef5eb;padding:9px 12px;font-size:11px}.article-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;margin:35px 0}.article-grid h2{font-family:Georgia,serif;font-size:36px;font-weight:400}.article-grid p{line-height:1.8;color:#5c5967}.explain{padding:30px;background:#f0edf6;border:1px solid #e3dbea}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:22px;background:white;border:1px solid var(--line)}.step b{font-size:12px;color:var(--purple)}.step h3{font-family:Georgia,serif;font-size:22px;font-weight:400}.step p{font-size:13px;line-height:1.7;color:var(--muted)}.note{font-size:12px;color:var(--muted);line-height:1.65}.pill{display:inline-block;border:1px solid #d5c9e9;border-radius:30px;padding:7px 12px;color:var(--purple);font-size:11px;font-weight:750}.data-label{background:#f0e8fa;padding:7px 10px;font-size:11px;color:#61489b;display:inline-block;margin-bottom:15px}.mobile-menu{display:none}@media(max-width:850px){.nav-end{display:none}.hero{grid-template-columns:1fr;padding-top:48px}.visual{height:350px}.grid3,.steps{grid-template-columns:1fr}.chartgrid,.article-grid,.manifesto{grid-template-columns:1fr}.manifesto{padding:30px}.section-head{display:block}.metrics{grid-template-columns:1fr 1fr}.tab{padding:10px;font-size:12px}.nav{height:auto;min-height:75px;flex-wrap:wrap;padding:13px 0}.tabs{width:100%;overflow:auto;justify-content:space-between}.hero h1{font-size:58px}}@media(max-width:500px){.shell{padding:0 17px}.metrics{grid-template-columns:1fr}.hero h1{font-size:48px}.visual{height:270px}.section{padding:46px 0}.panel{padding:17px}.manifesto{margin:0 -17px}}
-.panorama-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.rank-list{display:grid;gap:17px;margin:24px 0 28px}.rank-row{display:grid;grid-template-columns:118px 1fr 38px;align-items:center;gap:12px;font-size:12px}.rank-row strong{text-align:right}.rank-track{height:9px;background:#f0edf6;border-radius:99px;overflow:hidden}.rank-track span{display:block;height:100%;background:linear-gradient(90deg,#aa91e0,#7658c4);border-radius:99px}@media(max-width:700px){.panorama-metrics{grid-template-columns:1fr}.rank-row{grid-template-columns:95px 1fr 35px;gap:8px}}
-</style><link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/><style>#liveMap{height:355px;width:100%;background:#e9e9e4}.map-demo{height:355px}.map-overlay{z-index:500;pointer-events:none}.data-status{font-size:12px;color:#6c6b76;margin:10px 0 20px;line-height:1.5}.field select:disabled{opacity:.55}.rank-row{grid-template-columns:125px 1fr 52px}@media(max-width:700px){.rank-row{grid-template-columns:95px 1fr 45px}}</style></head><body><header class="top"><div class="shell nav"><div class="logo">◉ radar<span>ambiental</span></div><nav aria-label="Secciones" class="tabs"><button class="tab active" data-page="inicio">Inicio</button><button class="tab" data-page="panorama">Panorama</button><button class="tab" data-page="fuego">Fuego</button><button class="tab" data-page="agua">Agua</button><button class="tab" data-page="conexiones">Conexiones</button></nav><span class="nav-end">Argentina · Observatorio independiente</span></div></header>
-<main><section class="page active" id="inicio"><div class="shell hero"><div><div class="eyebrow">Datos abiertos · Ambiente · Argentina</div><h1>Todo está<br/><em>conectado.</em></h1><p class="lead">Observamos señales del territorio argentino, traducimos información ambiental y exploramos las conexiones entre el clima, el agua, el fuego y nuestras decisiones.</p><div class="tagline">◉ Detectar <span>·</span> Traducir <span>·</span> Conectar</div></div><div aria-label="Ilustración cartográfica abstracta del territorio" class="visual"><svg preserveaspectratio="xMidYMid slice" viewbox="0 0 500 500"><defs><filter id="grain"><feturbulence basefrequency=".025" numoctaves="3" seed="9" type="fractalNoise"></feturbulence><fecolormatrix type="saturate" values="0"></fecolormatrix><fecomponenttransfer><fefunca slope=".13" type="linear"></fefunca></fecomponenttransfer></filter></defs><path d="M-20 40 C120 120 210 20 340 80 S560 200 500 300 S320 350 240 500" fill="none" opacity=".9" stroke="#f4f0e7" stroke-width="65"></path><path d="M-30 85 C110 165 210 70 345 125 S510 220 500 300 S340 385 290 510" fill="none" opacity=".7" stroke="#657e86" stroke-width="30"></path><path d="M-40 110 C100 190 215 85 350 155 S510 230 500 310 S345 400 300 510" fill="none" opacity=".85" stroke="#e4e1d8" stroke-width="13"></path><g fill="none" opacity=".55" stroke="#fff" stroke-width="1"><circle cx="315" cy="245" r="72"></circle><circle cx="315" cy="245" r="125"></circle><circle cx="315" cy="245" r="180"></circle><path d="M315 20V470M70 245H500"></path></g><g fill="#7658c4"><circle cx="315" cy="245" r="7"></circle><circle cx="195" cy="156" r="5"></circle><circle cx="415" cy="365" r="5"></circle></g><rect filter="url(#grain)" height="500" width="500"></rect></svg><div class="visual-label"><div><strong>Un territorio, múltiples señales.</strong>Capas, patrones y preguntas para explorar.</div><span>01 / 04</span></div></div></div><div class="shell section"><div class="section-head"><div><div class="eyebrow">Exploraciones</div><h2>Mirar más allá<br/>del dato aislado.</h2></div><p>Cada exploración parte de una fuente verificable. El objetivo no es simplificar el ambiente: es hacerlo más comprensible.</p></div><div class="grid3"><article class="story"><div class="art fire"><svg viewbox="0 0 400 200"><path d="M0 160Q90 100 170 145T400 90V200H0" fill="#504d55"></path><path d="M0 195Q150 125 260 168T400 110V200" fill="#d7b2a1"></path><g fill="#ead8cc" opacity=".55"><ellipse cx="100" cy="65" rx="110" ry="35"></ellipse><ellipse cx="260" cy="90" rx="150" ry="30"></ellipse></g><g fill="#c97c60"><circle cx="100" cy="145" r="4"></circle><circle cx="230" cy="155" r="5"></circle><circle cx="310" cy="128" r="4"></circle></g></svg></div><div class="story-body"><span class="eyebrow">01 / Fuego</span><h3>Señales desde el espacio</h3><p>Explorá detecciones térmicas satelitales y sus patrones en el territorio.</p><button data-goto="fuego">Explorar fuego ↗</button></div></article><article class="story"><div class="art water"><svg viewbox="0 0 400 200"><path d="M-20 30Q150 90 220 10T420 80" fill="none" stroke="#e4e6e1" stroke-width="50"></path><path d="M-20 30Q150 90 220 10T420 80" fill="none" stroke="#587e87" stroke-width="25"></path><path d="M-20 160Q100 80 240 150T420 120" fill="none" stroke="#e1e4dd" stroke-width="55"></path><path d="M-20 160Q100 80 240 150T420 120" fill="none" stroke="#5f8b91" stroke-width="25"></path></svg></div><div class="story-body"><span class="eyebrow">02 / Agua</span><h3>Los ríos bajo la lupa</h3><p>Observá niveles hidrométricos y aprendé sobre los procesos que influyen en ellos.</p><button data-goto="agua">Explorar agua ↗</button></div></article><article class="story"><div class="art connect"><svg viewbox="0 0 400 200"><g fill="none" stroke="#f7f2ed" stroke-width="1.5"><path d="M20 160L130 60 250 110 350 30M130 60L220 175 350 30M20 160L250 110"></path></g><g fill="#7658c4"><circle cx="20" cy="160" r="7"></circle><circle cx="130" cy="60" r="7"></circle><circle cx="250" cy="110" r="7"></circle><circle cx="350" cy="30" r="7"></circle><circle cx="220" cy="175" r="7"></circle></g></svg></div><div class="story-body"><span class="eyebrow">03 / Conexiones</span><h3>Las historias detrás de los datos</h3><p>Preguntas simples para comprender procesos ambientales complejos.</p><button data-goto="conexiones">Explorar conexiones ↗</button></div></article></div></div><div class="shell section"><div class="manifesto"><div><div class="eyebrow" style="color:#c3b2ef">Nuestra mirada</div><h2>Observar el ambiente.<br/>Cuestionar el sistema.</h2></div><div><p>Un punto en un mapa no cuenta toda la historia. Nos interesan los patrones, las causas posibles, las incertidumbres y las decisiones que transforman nuestro territorio.</p><p>Trabajamos con una regla editorial: separar lo que los datos muestran, lo que la ciencia explica y lo que todavía necesitamos investigar.</p></div></div></div></section>
-<section class="page" id="panorama"><div class="shell subhero"><div class="eyebrow">Panorama / Argentina</div><h1>Argentina, en perspectiva.</h1><p>Las principales señales ambientales, reunidas en una lectura rápida. Un punto de partida para explorar, comparar y hacer nuevas preguntas.</p></div><div class="shell section"><div class="notice">Los indicadores se calculan con datos de NASA FIRMS y del Instituto Nacional del Agua. Si una fuente no responde, se muestra «Sin datos»; no se inventan mediciones.</div><div class="section-head"><div><div class="eyebrow">Señales del radar</div><h2>Lo que estamos observando.</h2></div><p>Una síntesis de fuego y agua, sin confundir detecciones satelitales con incendios confirmados ni cambios de nivel con riesgo de inundación.</p></div><div class="metrics panorama-metrics"><div class="metric"><small>Detecciones térmicas · período consultado</small><strong id="panFireTotal">—</strong><p>NASA FIRMS · Argentina · detecciones, no incendios confirmados</p></div><div class="metric"><small>Tendencia hidrométrica · estación seleccionada</small><strong id="panWaterTrend">Sin datos</strong><p id="panWaterDetail">Seleccioná una estación en Agua para consultar su tendencia.</p></div><div class="metric"><small>Fuentes integradas</small><strong>02</strong><p>NASA FIRMS + Instituto Nacional del Agua</p></div></div><div class="chartgrid"><div class="panel"><div class="eyebrow">Fuego / Distribución territorial</div><h3>Provincias con más detecciones</h3><p>Detecciones satelitales por provincia, según los datos recibidos. No equivale a incendios confirmados.</p><div aria-label="Ranking real de provincias" class="rank-list" id="panRanking"></div><button class="linkbtn" data-goto="fuego">Explorar el fuego ↗</button></div><div class="panel"><div class="eyebrow">Agua / Tendencia</div><h3>¿Sube o baja el nivel?</h3><p>Evolución real de la estación consultada en Agua. No representa todos los ríos.</p><svg aria-label="Evolución real de un nivel hidrométrico" class="plot" id="panWaterPlot" role="img" viewbox="0 0 460 240"></svg><button class="linkbtn" data-goto="agua">Explorar el agua ↗</button></div></div><div class="manifesto" style="margin-top:34px"><div><div class="eyebrow" style="color:#c3b2ef">Lectura del radar</div><h2>Dos señales.<br/>Una mirada más amplia.</h2></div><div><p>Las detecciones térmicas ayudan a localizar actividad de calor. Los registros hidrométricos muestran cómo cambia el nivel del agua en estaciones concretas. Observar ambas señales abre preguntas sobre el territorio, pero no prueba por sí solo que estén relacionadas.</p><button class="linkbtn" data-goto="conexiones" style="color:#e1d4ff">Explorar conexiones ↗</button></div></div><p class="note" style="margin-top:22px">Los indicadores muestran la cobertura de cada consulta. Una estación sin mediciones recientes no permite inferir una tendencia actual.</p></div></section><section class="page" id="fuego"><div class="shell subhero"><div class="eyebrow">Exploración 01 / Fuego</div><h1>Señales desde el espacio.</h1><p>Las detecciones térmicas permiten observar actividad de calor en el territorio argentino. No equivalen automáticamente a incendios confirmados ni a superficie quemada.</p></div><div class="shell section"><span class="data-label">DATOS ABIERTOS · CONSULTA EN VIVO</span><div class="controls"><label class="field">Período<select id="firePeriod"><option value="5">Últimos 5 días</option><option value="3">Últimos 3 días</option><option value="1">Último día</option></select></label><label class="field">Región<select id="fireRegion"><option value="">Toda Argentina</option></select></label><label class="field">Confianza<select id="fireConfidence"><option value="">Todas</option><option value="l">Baja</option><option value="n">Nominal</option><option value="h">Alta</option></select></label><label class="field">Observación<select id="fireDaynight"><option value="">Día y noche</option><option value="D">Día</option><option value="N">Noche</option></select></label><label class="field">Indicador<select id="fireMetric"><option value="count">Detecciones</option><option value="frp">FRP acumulada</option></select></label><button class="btn" id="fireUpdate">Actualizar vista</button></div><div class="metrics"><div class="metric"><small>Detecciones satelitales</small><strong id="fireTotal">—</strong><p>Registros satelitales, no eventos únicos.</p></div><div class="metric"><small>Período</small><strong id="fireDays">5 días</strong><p>Ventana seleccionada.</p></div><div class="metric"><small>Estado</small><strong style="font-size:21px">Exploración</strong><p>No es una herramienta para emergencias.</p></div></div><p class="data-status" id="fireStatus" role="status">Preparando consulta NASA FIRMS…</p><div class="chartgrid"><div class="panel"><h3>Distribución territorial</h3><p>Ubicación de las detecciones recibidas desde NASA FIRMS.</p><div class="map-demo"><div id="liveMap"></div></div></div><div class="panel"><h3>Evolución diaria</h3><p>Cantidad de detecciones por fecha en el período consultado.</p><svg aria-label="Gráfico real de detecciones" class="plot" id="firePlot" role="img" viewbox="0 0 460 240"></svg></div></div><p class="note">Fuente: NASA FIRMS. Las anomalías térmicas no equivalen necesariamente a incendios. Los datos pueden tener demoras y limitaciones de cobertura.</p></div></section>
-<section class="page" id="agua"><div class="shell subhero"><div class="eyebrow">Exploración 02 / Agua</div><h1>Los ríos bajo la lupa.</h1><p>Una mirada a los niveles de los ríos, sus variaciones y el contexto climático. Medir el nivel no equivale a medir el riesgo de inundación.</p></div><div class="shell section"><div class="notice"><strong>Contexto climático · El Niño y la Cuenca del Plata</strong><br/>El Niño puede modificar los patrones de lluvia en distintas regiones de Sudamérica y contribuir a cambios en los caudales. Su influencia no es igual en todos los ríos ni explica por sí sola una crecida concreta. <strong>Este prototipo no afirma el estado actual del ENOS.</strong></div><span class="data-label">DATOS ABIERTOS · CONSULTA EN VIVO</span><div class="controls"><label class="field">Río<select id="waterRiver"></select></label><label class="field">Estación<select id="waterStation"><option value="">Cargando catálogo…</option></select></label><label class="field">Período<select id="waterPeriod"><option value="30">30 días</option><option value="90">90 días</option><option value="7">7 días</option></select></label><button class="btn" id="waterUpdate">Consultar estación</button></div><p class="data-status" id="waterStatus" role="status">Preparando catálogo INA…</p><div class="metrics"><div class="metric"><small>Último nivel informado</small><strong id="waterLatest">—</strong><p>Última observación disponible para la estación elegida.</p></div><div class="metric"><small>Variación observada</small><strong id="waterChange">—</strong><p>Respecto del registro anterior.</p></div><div class="metric"><small>Fuente</small><strong style="font-size:23px">INA</strong><p>Consulta mediante la función INA existente.</p></div></div><div class="chartgrid"><div class="panel"><h3>Evolución hidrométrica</h3><p>Serie temporal recibida del INA.</p><svg aria-label="Gráfico de nivel real" class="plot" id="waterPlot" role="img" viewbox="0 0 460 240"></svg></div><div class="panel"><h3>Variación entre mediciones</h3><p>Diferencia entre observaciones consecutivas.</p><svg aria-label="Gráfico de variación real" class="plot" id="waterChangePlot" role="img" viewbox="0 0 460 240"></svg></div></div><div class="article-grid"><div><div class="eyebrow">Entender el fenómeno</div><h2>¿Qué tiene que ver el Pacífico con los ríos argentinos?</h2><p>Durante El Niño se debilitan los vientos alisios y se expande el agua superficial cálida por el Pacífico ecuatorial central y oriental. Esa alteración modifica la circulación atmosférica y puede influir en las precipitaciones de la Cuenca del Plata.</p><p>Es un fenómeno de interacción entre el océano y la atmósfera, cuyos efectos varían según la región y la época del año.</p></div><div class="explain"><strong>Lo que podemos decir con cuidado</strong><p>Las lluvias aguas arriba, los afluentes, la gestión de embalses y los tiempos de propagación también influyen en los niveles. Para explicar una crecida necesitamos más que una coincidencia temporal.</p><p class="note">Fuentes de referencia para una futura integración editorial: Servicio Meteorológico Nacional, NOAA e Instituto Nacional del Agua.</p></div></div></div></section>
-<section class="page" id="conexiones"><div class="shell subhero"><div class="eyebrow">Exploración 03 / Conexiones</div><h1>Las historias detrás<br/>de los datos.</h1><p>El ambiente funciona como un sistema. Acá reunimos preguntas y explicaciones que ayudan a entender cómo pueden relacionarse sus fenómenos, sin convertir hipótesis en certezas.</p></div><div class="shell section"><div class="section-head"><div><div class="eyebrow">Historias para explorar</div><h2>Una pregunta puede<br/>abrir muchas capas.</h2></div><p>Sin fórmulas difíciles ni conclusiones apresuradas. Con fuentes, contexto y curiosidad.</p></div><div class="steps"><article class="step"><b>01 / CLIMA + AGUA</b><h3>¿Cómo llega El Niño hasta nuestros ríos?</h3><p>Una historia que empieza en el océano Pacífico y continúa en la atmósfera y las lluvias de Sudamérica.</p><button class="linkbtn" data-goto="agua">Explorar la explicación ↗</button></article><article class="step"><b>02 / AGUA + FUEGO</b><h3>¿Qué cambia cuando baja el agua de un humedal?</h3><p>La exposición de suelos y vegetación puede modificar las condiciones para el fuego, aunque las causas de ignición son otro problema.</p><span class="pill">Próxima historia</span></article><article class="step"><b>03 / TECNOLOGÍA + TERRITORIO</b><h3>¿Qué puede ver un satélite y qué no?</h3><p>Una detección térmica es una señal. Entender lo que significa requiere más fuentes y conocimiento del territorio.</p><span class="pill">Próxima historia</span></article></div><div class="manifesto" style="margin-top:35px"><div><div class="eyebrow" style="color:#c3b2ef">Nuestro método</div><h2>Tres formas de mirar.</h2></div><div><p><strong>Lo que observamos:</strong> datos y mediciones verificables.<br/><strong>Lo que sabemos:</strong> explicaciones científicas respaldadas.<br/><strong>Lo que investigamos:</strong> preguntas abiertas y conexiones posibles.</p></div></div></div></section></main><footer class="shell footer"><span>◉ radarambiental · Detectar · Traducir · Conectar</span><span>Contacto: <a href="mailto:somosradarambiental@gmail.com" style="color:var(--purple);font-weight:750;text-decoration:underline;text-underline-offset:3px">somosradarambiental@gmail.com</a><br/><small>Datos consultados mediante las funciones de Netlify</small></span></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script>
-const pages=[...document.querySelectorAll('.page')];function go(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.tab').forEach(b=>{b.classList.toggle('active',b.dataset.page===id);b.setAttribute('aria-current',b.dataset.page===id?'page':'false')});history.replaceState(null,'','#'+id);window.scrollTo(0,0)}document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.goto)));
-function plot(id,values,bar=false){const svg=document.getElementById(id),W=460,H=240,left=39,right=12,top=19,bottom=33,w=W-left-right,h=H-top-bottom;let min=Math.min(...values),max=Math.max(...values);if(bar){min=Math.min(min,0);max=Math.max(max,0)}if(max===min)max=min+1;const y=v=>top+h-(v-min)/(max-min)*h;let s='';for(let k=0;k<=4;k++){const yy=top+k*h/4;s+=`<line x1="${left}" x2="${W-right}" y1="${yy}" y2="${yy}" stroke="#ece9ef"/><text x="${left-7}" y="${yy+4}" text-anchor="end" font-size="10" fill="#8a8692">${(max-(max-min)*k/4).toFixed(1)}</text>`}if(bar){const bw=w/values.length*.62;values.forEach((v,i)=>{const x=left+(i+.5)*w/values.length-bw/2,base=y(0),yy=y(v);s+=`<rect x="${x}" y="${Math.min(base,yy)}" width="${bw}" height="${Math.max(1,Math.abs(base-yy))}" fill="${v>=0?'#9275d2':'#c4b9d7'}"/>`})}else{const coords=values.map((v,i)=>[left+i*w/Math.max(1,values.length-1),y(v)]);s+=`<path d="${coords.map((p,i)=>(i?'L':'M')+p.join(' ')).join(' ')}" stroke="#7658c4" stroke-width="3" fill="none" stroke-linejoin="round"/>`;coords.forEach(([x,yy])=>s+=`<circle cx="${x}" cy="${yy}" r="3.5" fill="#7658c4" stroke="white" stroke-width="1.5"/>`)}s+=`<text x="${left}" y="${H-7}" font-size="11" fill="#8a8692">Inicio del período</text><text x="${W-right}" y="${H-7}" text-anchor="end" font-size="11" fill="#8a8692">Última medición</text>`;svg.innerHTML=s}
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radar Ambiental · Observar el ambiente. Cuestionar el sistema.</title>
+<style>
+:root{
+  --bg:#f8f7f4;
+  --ink:#252437;
+  --muted:#6c6b76;
+  --purple:#7658c4;
+  --pale:#eee9fa;
+  --line:#e5e0ec;
+  --dark:#242038;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+}
+a{color:inherit}
+button,select{font:inherit}
+button{cursor:pointer}
+.shell{width:min(1180px,calc(100% - 40px));margin:auto}
+.site-header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  min-height:78px;
+}
+.brand{
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:-.05em;
+}
+.brand-mark{color:var(--purple)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  padding:12px 15px;
+  border-radius:8px;
+  font-size:14px;
+}
+.tab.active{
+  background:var(--pale);
+  color:var(--purple);
+  font-weight:700;
+}
+.page{display:none}
+.page.active{display:block}
+.hero{
+  padding:105px 0;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+  align-items:center;
+}
+.eyebrow,.data-label{
+  color:var(--purple);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+h1,h2{
+  font-family:Georgia,serif;
+  font-weight:400;
+  line-height:1.12;
+  letter-spacing:-.035em;
+}
+h1{font-size:clamp(48px,6vw,82px);margin:20px 0}
+h2{font-size:clamp(32px,4vw,52px);margin:15px 0 25px}
+h3{font-size:20px;line-height:1.3}
+p{color:var(--muted)}
+.lead{font-size:19px;max-width:650px}
+.pill{
+  display:inline-block;
+  border:1px solid #d9cfeb;
+  border-radius:30px;
+  padding:7px 13px;
+  color:var(--purple);
+  font-size:12px;
+  font-weight:700;
+}
+.btn{
+  background:var(--dark);
+  border:0;
+  color:#fff;
+  padding:14px 20px;
+  font-weight:700;
+}
+.btn:disabled{opacity:.5;cursor:wait}
+.linkbtn{
+  border:0;
+  background:none;
+  padding:0;
+  color:var(--purple);
+  font-weight:800;
+  text-align:left;
+}
+.hero-art{
+  background:#ddd5f0;
+  min-height:390px;
+  border-radius:4px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-art:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse at 70% 30%,#8c77c5 0,transparent 42%),
+    radial-gradient(ellipse at 25% 70%,#c5b8e3 0,transparent 45%),
+    linear-gradient(135deg,#e9e3f4,#9e8cc8);
+}
+.hero-art:after{
+  content:"OBSERVAR / CONECTAR";
+  position:absolute;
+  bottom:25px;
+  left:25px;
+  color:white;
+  font-size:12px;
+  letter-spacing:.2em;
+}
+.section{padding:75px 0}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:35px;
+  margin-bottom:30px;
+}
+.section-head>p{max-width:400px}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.step,.panel,.metric,.explain{
+  background:white;
+  border:1px solid var(--line);
+  padding:25px;
+}
+.step b{color:var(--purple);font-size:12px}
+.step h3{margin:18px 0 10px}
+.step p{font-size:14px}
+.manifesto{
+  background:var(--dark);
+  color:white;
+  padding:55px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+.manifesto p{color:#ddd5ed}
+.subhero{
+  padding-top:80px;
+  padding-bottom:35px;
+}
+.subhero h1{font-size:clamp(44px,5vw,68px)}
+.subhero p{max-width:750px;font-size:18px}
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin:25px 0;
+}
+.metric small{
+  display:block;
+  text-transform:uppercase;
+  font-size:11px;
+  letter-spacing:.08em;
+  color:var(--muted);
+}
+.metric strong{
+  display:block;
+  font-size:32px;
+  margin:8px 0;
+  line-height:1.3;
+}
+.metric p{font-size:13px;margin:0}
+.controls{
+  display:flex;
+  gap:15px;
+  align-items:end;
+  flex-wrap:wrap;
+  margin:24px 0;
+}
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  font-size:13px;
+  font-weight:700;
+  min-width:155px;
+}
+.field select{
+  background:white;
+  border:1px solid #d8d1e2;
+  padding:12px;
+  min-height:45px;
+  max-width:280px;
+}
+.chartgrid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:18px;
+  margin:22px 0;
+}
+.panel h3{margin-top:0}
+.panel p{font-size:13px}
+.map-demo{height:410px;position:relative}
+#liveMap{height:100%;width:100%;z-index:0}
+.plot{width:100%;height:auto;min-height:240px}
+.data-status,.note{
+  font-size:13px;
+  color:var(--muted);
+}
+.notice{
+  padding:20px;
+  background:var(--pale);
+  border-left:3px solid var(--purple);
+  margin:25px 0;
+}
+.article-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:40px;
+  margin-top:70px;
+}
+.rank-row{
+  display:grid;
+  grid-template-columns:145px 1fr 65px;
+  gap:12px;
+  align-items:center;
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+.rank-track{
+  height:8px;
+  background:#eee9f7;
+  border-radius:20px;
+  overflow:hidden;
+}
+.rank-track span{
+  display:block;
+  height:100%;
+  background:var(--purple);
+}
+.panorama-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.panorama-metrics{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.river-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+}
+.river-item button{
+  border:0;
+  background:none;
+  text-align:left;
+  color:var(--ink);
+  font-weight:700;
+  padding:0;
+}
+.river-item button:hover{color:var(--purple)}
+.river-item small{display:block;color:var(--muted)}
+.river-trend{font-weight:800;white-space:nowrap}
+.footer{
+  border-top:1px solid var(--line);
+  padding:40px 0;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:13px;
+}
+@media(max-width:800px){
+  .topbar{flex-direction:column;padding:15px 0}
+  .tabs{justify-content:center}
+  .hero,.steps,.manifesto,.article-grid,
+  .chartgrid,.panorama-grid{grid-template-columns:1fr}
+  .hero{padding:55px 0}
+  .hero-art{min-height:260px}
+  .metrics,.panorama-metrics{grid-template-columns:1fr}
+  .section{padding:45px 0}
+  .manifesto{padding:30px}
+  .footer{flex-direction:column}
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
 
-const el=id=>document.getElementById(id);
-const format=n=>Number(n).toLocaleString('es-AR',{maximumFractionDigits:2});
-const clean=t=>String(t??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let firePoints=[],fireRequest=0,inaOptions=[],waterRows=[],selectedStation=null;
-let map=null,markers=null;
-try{if(typeof L!=='undefined'){map=L.map('liveMap').setView([-38.5,-64.5],4);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors',maxZoom:18}).addTo(map);markers=L.featureGroup().addTo(map);}}catch(e){el('fireStatus').textContent='El mapa no pudo inicializarse: '+e.message;}
-const baseGo=go;go=function(id){baseGo(id);if(id==='fuego'&&map)setTimeout(()=>map.invalidateSize(),100);};
-function clearPlot(id){el(id).innerHTML='';}
-function rankFire(points){const counts={};for(const p of points){counts[p.provincia]=(counts[p.provincia]||0)+1}return Object.entries(counts).sort((a,b)=>b[1]-a[1]);}
-function fireFiltered(){return firePoints.filter(p=>(!el('fireRegion').value||p.provincia===el('fireRegion').value)&&(!el('fireConfidence').value||p.confidence===el('fireConfidence').value)&&(!el('fireDaynight').value||p.daynight===el('fireDaynight').value));}
-function renderFire(){
- const points=fireFiltered(),frp=el('fireMetric').value==='frp';
- el('fireTotal').textContent=format(frp?points.reduce((a,p)=>a+(Number.isFinite(p.frp)?p.frp:0),0):points.length);
- el('fireDays').textContent=el('firePeriod').value+' días';
- if(markers){markers.clearLayers();for(const p of points){L.circleMarker([p.latitude,p.longitude],{radius:frp?Math.min(15,4+Math.sqrt(Math.max(0,p.frp||0))*.75):4,color:'#7658c4',fillColor:'#a58be0',fillOpacity:.72,weight:1}).bindPopup('<b>Detección térmica</b><br>'+clean(p.provincia)+'<br>'+clean(p.acq_date)+' '+clean(p.acq_time)+' UTC<br>FRP: '+clean(Number.isFinite(p.frp)?p.frp:'sin dato')+' MW').addTo(markers)}if(points.length&&markers.getBounds().isValid())map.fitBounds(markers.getBounds().pad(.18),{maxZoom:8});else map.setView([-38.5,-64.5],4);}
- const days=[...new Set(firePoints.map(p=>p.acq_date))].sort();const vals=days.map(d=>points.filter(p=>p.acq_date===d).reduce((a,p)=>a+(frp?(Number.isFinite(p.frp)?p.frp:0):1),0));if(vals.length)plot('firePlot',vals,true);else clearPlot('firePlot');
- el('fireStatus').textContent=`${format(firePoints.length)} detecciones recibidas · ${format(points.length)} visibles. ${frp?'FRP en MW;':'Conteo de detecciones;'} cobertura según respuesta de NASA FIRMS.`;
+<header class="site-header">
+  <div class="shell topbar">
+    <div class="brand">
+      <span class="brand-mark">◉</span> radarambiental
+    </div>
+
+    <nav class="tabs" aria-label="Secciones">
+      <button class="tab active" data-page="inicio">Inicio</button>
+      <button class="tab" data-page="panorama">Panorama</button>
+      <button class="tab" data-page="fuego">Fuego</button>
+      <button class="tab" data-page="agua">Agua</button>
+      <button class="tab" data-page="conexiones">Conexiones</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ========================= -->
+<!-- INICIO -->
+<!-- ========================= -->
+
+<section class="page active" id="inicio">
+
+  <div class="shell hero">
+    <div>
+      <div class="eyebrow">
+        Datos abiertos · Ambiente · Argentina
+      </div>
+
+      <h1>
+        Todo está<br>
+        <em style="color:var(--purple)">conectado.</em>
+      </h1>
+
+      <p class="lead">
+        Observamos señales del territorio argentino,
+        traducimos información ambiental y exploramos
+        las conexiones entre el clima, el agua, el fuego
+        y nuestras decisiones.
+      </p>
+
+      <div class="pill">
+        Detectar · Traducir · Conectar
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div style="
+        position:absolute;
+        z-index:2;
+        bottom:22px;
+        left:22px;
+        right:22px;
+        background:#ffffffd9;
+        padding:18px;
+        font-size:13px;
+      ">
+        <strong>Un territorio, múltiples señales.</strong>
+        <div>Capas, patrones y preguntas para explorar.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell section">
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Exploraciones</div>
+        <h2>Mirar más allá<br>del dato aislado.</h2>
+      </div>
+
+      <p>
+        Cada exploración parte de una fuente verificable.
+        El objetivo no es simplificar el ambiente:
+        es hacerlo más comprensible.
+      </p>
+    </div>
+
+    <div class="steps">
+
+      <article class="step">
+        <b>01 / FUEGO</b>
+        <h3>Señales desde el espacio</h3>
+        <p>
+          Explorá detecciones térmicas satelitales
+          y sus patrones en el territorio argentino.
+        </p>
+        <button class="linkbtn" data-goto="fuego">
+          Explorar fuego ↗
+        </button>
+      </article>
+
+      <article class="step">
+        <b>02 / AGUA</b>
+        <h3>Los ríos bajo la lupa</h3>
+        <p>
+          Observá niveles hidrométricos y aprendé
+          sobre los procesos que influyen en ellos.
+        </p>
+        <button class="linkbtn" data-goto="agua">
+          Explorar agua ↗
+        </button>
+      </article>
+
+      <article class="step">
+        <b>03 / CONEXIONES</b>
+        <h3>Las historias detrás de los datos</h3>
+        <p>
+          Preguntas simples para comprender
+          procesos ambientales complejos.
+        </p>
+        <button class="linkbtn" data-goto="conexiones">
+          Explorar conexiones ↗
+        </button>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="shell section">
+
+    <div class="manifesto">
+      <div>
+        <div class="eyebrow" style="color:#c3b2ef">
+          Nuestra mirada
+        </div>
+
+        <h2>
+          Observar el ambiente.<br>
+          Cuestionar el sistema.
+        </h2>
+      </div>
+
+      <div>
+        <p>
+          Un punto en un mapa no cuenta toda la historia.
+          Nos interesan los patrones, las causas posibles,
+          las incertidumbres y las decisiones que
+          transforman nuestro territorio.
+        </p>
+
+        <p>
+          Trabajamos con una regla editorial:
+          separar lo que los datos muestran,
+          lo que la ciencia explica y lo que
+          todavía necesitamos investigar.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- PANORAMA -->
+<!-- ========================= -->
+
+<section class="page" id="panorama">
+
+  <div class="shell subhero">
+    <div class="eyebrow">
+      Panorama / Argentina
+    </div>
+
+    <h1>Argentina, en perspectiva.</h1>
+
+    <p>
+      Las principales señales ambientales, reunidas
+      en una lectura rápida. Un punto de partida
+      para explorar, comparar y hacer nuevas preguntas.
+    </p>
+  </div>
+
+  <div class="shell section">
+
+    <div class="notice">
+      Los indicadores se calculan con datos de
+      <strong>NASA FIRMS</strong> y del
+      <strong>Instituto Nacional del Agua</strong>.
+
+      Si una fuente no responde, se muestra
+      «Sin datos». No se inventan mediciones.
+    </div>
+
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">
+          Señales del radar
+        </div>
+
+        <h2>Lo que estamos observando.</h2>
+      </div>
+
+      <p>
+        Una síntesis de fuego y agua, sin confundir
+        detecciones satelitales con incendios confirmados
+        ni cambios de nivel con riesgo de inundación.
+      </p>
+    </div>
+
+    <div class="metrics panorama-metrics">
+
+      <div class="metric">
+        <small>
+          Detecciones térmicas · período consultado
+        </small>
+
+        <strong id="panFireTotal">—</strong>
+
+        <p>
+          NASA FIRMS · Argentina · detecciones,
+          no incendios confirmados.
+        </p>
+      </div>
+
+      <div class="metric">
+        <small>
+          Ríos · estaciones de referencia
+        </small>
+
+        <strong
+          id="panWaterTrend"
+          style="font-size:22px"
+        >
+          Consultando…
+        </strong>
+
+        <p id="panWaterDetail">
+          Cargando automáticamente datos del INA.
+        </p>
+      </div>
+
+      <div class="metric">
+        <small>Fuentes integradas</small>
+
+        <strong>02</strong>
+
+        <p>
+          NASA FIRMS + Instituto Nacional del Agua
+        </p>
+      </div>
+
+    </div>
+
+    <div class="panorama-grid">
+
+      <!-- FUEGO: RANKING DE PROVINCIAS -->
+
+      <div class="panel">
+
+        <div class="eyebrow">
+          Fuego / Distribución territorial
+        </div>
+
+        <h3>Provincias con más detecciones</h3>
+
+        <p>
+          Detecciones satelitales por provincia,
+          según los datos recibidos.
+          No equivalen a incendios confirmados.
+        </p>
+
+        <div
+          id="panRanking"
+          class="rank-list"
+          aria-label="Ranking de provincias"
+        >
+          Consultando NASA FIRMS…
+        </div>
+
+        <button
+          class="linkbtn"
+          data-goto="fuego"
+        >
+          Explorar el fuego ↗
+        </button>
+
+      </div>
+
+      <!-- AGUA: ESTACIONES DE REFERENCIA -->
+
+      <div class="panel">
+
+        <div class="eyebrow">
+          Agua / Estaciones de referencia
+        </div>
+
+        <h3>¿Dónde sube y dónde baja?</h3>
+
+        <p>
+          Comparación de estaciones individuales,
+          no de ríos completos.
+
+          Tendencia descriptiva de los últimos
+          siete días, cuando hay observaciones
+          suficientes y recientes.
+        </p>
+
+        <div
+          id="panWaterList"
+          class="river-list"
+          aria-live="polite"
+        >
+          Buscando estaciones con datos recientes…
+        </div>
+
+        <button
+          class="linkbtn"
+          data-goto="agua"
+        >
+          Explorar estaciones y gráficos ↗
+        </button>
+
+      </div>
+
+    </div>
+
+    <div
+      class="manifesto"
+      style="margin-top:35px"
+    >
+
+      <div>
+        <div
+          class="eyebrow"
+          style="color:#c3b2ef"
+        >
+          Lectura del radar
+        </div>
+
+        <h2>
+          Dos señales.<br>
+          Una mirada más amplia.
+        </h2>
+      </div>
+
+      <div>
+        <p>
+          Las detecciones térmicas ayudan a localizar
+          actividad de calor.
+
+          Los registros hidrométricos muestran
+          cómo cambia el nivel del agua
+          en estaciones concretas.
+        </p>
+
+        <p>
+          Observar ambas señales abre preguntas
+          sobre el territorio, pero no prueba
+          por sí solo que estén relacionadas.
+        </p>
+
+        <button
+          class="linkbtn"
+          data-goto="conexiones"
+          style="color:#e1d4ff"
+        >
+          Explorar conexiones ↗
+        </button>
+      </div>
+
+    </div>
+
+    <p class="note" style="margin-top:22px">
+      Los indicadores muestran la cobertura
+      de cada consulta.
+
+      Una estación sin mediciones recientes
+      no permite inferir una tendencia actual.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FUEGO -->
+<!-- ========================= -->
+
+<section class="page" id="fuego">
+
+  <div class="shell subhero">
+    <div class="eyebrow">Exploración 01 / Fuego</div>
+    <h1>Señales desde el espacio.</h1>
+    <p>
+      Las detecciones térmicas permiten observar
+      actividad de calor en el territorio argentino.
+      No equivalen automáticamente a incendios
+      confirmados ni a superficie quemada.
+    </p>
+  </div>
+
+  <div class="shell section">
+
+    <span class="data-label">
+      DATOS ABIERTOS · CONSULTA EN VIVO
+    </span>
+
+    <div class="controls">
+
+      <label class="field">
+        Período
+        <select id="firePeriod">
+          <option value="5">Últimos 5 días</option>
+          <option value="3">Últimos 3 días</option>
+          <option value="1">Último día</option>
+        </select>
+      </label>
+
+      <label class="field">
+        Región
+        <select id="fireRegion">
+          <option value="">Toda Argentina</option>
+        </select>
+      </label>
+
+      <label class="field">
+        Confianza
+        <select id="fireConfidence">
+          <option value="">Todas</option>
+          <option value="l">Baja</option>
+          <option value="n">Nominal</option>
+          <option value="h">Alta</option>
+        </select>
+      </label>
+
+      <label class="field">
+        Observación
+        <select id="fireDaynight">
+          <option value="">Día y noche</option>
+          <option value="D">Día</option>
+          <option value="N">Noche</option>
+        </select>
+      </label>
+
+      <label class="field">
+        Indicador
+        <select id="fireMetric">
+          <option value="count">Detecciones</option>
+          <option value="frp">FRP acumulada</option>
+        </select>
+      </label>
+
+      <button class="btn" id="fireUpdate" type="button">
+        Actualizar vista
+      </button>
+
+    </div>
+
+    <div class="metrics">
+
+      <div class="metric">
+        <small id="fireTotalLabel">
+          Detecciones satelitales
+        </small>
+
+        <strong id="fireTotal">—</strong>
+
+        <p id="fireMetricNote">
+          Registros satelitales, no eventos únicos.
+        </p>
+      </div>
+
+      <div class="metric">
+        <small>Período</small>
+        <strong id="fireDays">5 días</strong>
+        <p>Ventana seleccionada.</p>
+      </div>
+
+      <div class="metric">
+        <small>Estado</small>
+        <strong style="font-size:21px">
+          Exploración
+        </strong>
+        <p>No es una herramienta para emergencias.</p>
+      </div>
+
+    </div>
+
+    <p
+      class="data-status"
+      id="fireStatus"
+      role="status"
+    >
+      Preparando consulta NASA FIRMS…
+    </p>
+
+    <div class="chartgrid">
+
+      <div class="panel">
+        <h3>Distribución territorial</h3>
+
+        <p>
+          Ubicación de las detecciones recibidas
+          desde NASA FIRMS.
+        </p>
+
+        <div class="map-demo">
+          <div id="liveMap"></div>
+        </div>
+
+        <p id="mapNote" class="note" hidden>
+          Algunas imágenes del mapa base no pudieron
+          cargarse. Las detecciones satelitales
+          pueden seguir disponibles.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Evolución diaria</h3>
+
+        <p id="firePlotDescription">
+          Cantidad de detecciones por fecha
+          en el período consultado.
+        </p>
+
+        <svg
+          id="firePlot"
+          class="plot"
+          role="img"
+          aria-label="Evolución diaria de detecciones"
+          viewBox="0 0 460 240"
+        ></svg>
+      </div>
+
+    </div>
+
+    <p class="note">
+      Fuente:
+      <a
+        href="https://firms.modaps.eosdis.nasa.gov/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >NASA FIRMS</a>.
+
+      Las anomalías térmicas no equivalen
+      necesariamente a incendios.
+
+      La FRP es una estimación de potencia radiativa
+      expresada en MW; no representa superficie quemada.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- AGUA -->
+<!-- ========================= -->
+
+<section class="page" id="agua">
+
+  <div class="shell subhero">
+    <div class="eyebrow">Exploración 02 / Agua</div>
+
+    <h1>Los ríos bajo la lupa.</h1>
+
+    <p>
+      Una mirada a los niveles de los ríos,
+      sus variaciones y el contexto climático.
+
+      Medir el nivel del agua no equivale
+      a medir el riesgo de inundación.
+    </p>
+  </div>
+
+  <div class="shell section">
+
+    <div class="notice">
+      <strong>
+        ¿Qué es una estación hidrométrica?
+      </strong>
+
+      <p>
+        Es un punto de medición ubicado en una
+        localidad o tramo de un río.
+
+        Por ejemplo, una estación en Corrientes
+        permite observar el nivel del Paraná
+        en ese lugar, pero no representa
+        automáticamente la situación de todo el río.
+      </p>
+
+      <p>
+        Cada estación tiene su propia referencia
+        de medición. Por eso, no debemos comparar
+        directamente las alturas absolutas
+        de estaciones diferentes.
+      </p>
+    </div>
+
+    <span class="data-label">
+      DATOS ABIERTOS · INSTITUTO NACIONAL DEL AGUA
+    </span>
+
+    <div class="controls">
+
+      <label class="field">
+        Río
+        <select id="waterRiver">
+          <option value="">Cargando ríos…</option>
+        </select>
+      </label>
+
+      <label class="field">
+        Estación
+        <select id="waterStation">
+          <option value="">Cargando catálogo…</option>
+        </select>
+      </label>
+
+      <label class="field">
+        Período
+        <select id="waterPeriod">
+          <option value="30">30 días</option>
+          <option value="90">90 días</option>
+          <option value="7">7 días</option>
+        </select>
+      </label>
+
+      <button
+        class="btn"
+        id="waterUpdate"
+        type="button"
+      >
+        Consultar estación
+      </button>
+
+    </div>
+
+    <p class="note" id="waterHint">
+      Elegí una estación para conocer
+      su ubicación y disponibilidad de datos.
+    </p>
+
+    <p
+      class="data-status"
+      id="waterStatus"
+      role="status"
+    >
+      Preparando catálogo INA…
+    </p>
+
+    <div class="metrics">
+
+      <div class="metric">
+        <small>Último nivel informado</small>
+        <strong id="waterLatest">—</strong>
+        <p>
+          Última observación disponible
+          para la estación elegida.
+        </p>
+      </div>
+
+      <div class="metric">
+        <small>Variación observada</small>
+        <strong id="waterChange">—</strong>
+        <p>
+          Diferencia respecto del registro anterior.
+        </p>
+      </div>
+
+      <div class="metric">
+        <small>Fuente</small>
+        <strong style="font-size:23px">INA</strong>
+        <p>
+          Sistema de Información Hidrológica.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="chartgrid">
+
+      <div class="panel">
+        <h3>Evolución hidrométrica</h3>
+
+        <p>
+          Serie temporal de niveles recibida
+          desde el Instituto Nacional del Agua.
+        </p>
+
+        <svg
+          id="waterPlot"
+          class="plot"
+          role="img"
+          aria-label="Evolución del nivel del agua"
+          viewBox="0 0 460 240"
+        ></svg>
+      </div>
+
+      <div class="panel">
+        <h3>Variación entre mediciones</h3>
+
+        <p>
+          Diferencia de nivel entre
+          observaciones consecutivas.
+        </p>
+
+        <svg
+          id="waterChangePlot"
+          class="plot"
+          role="img"
+          aria-label="Variaciones del nivel"
+          viewBox="0 0 460 240"
+        ></svg>
+      </div>
+
+    </div>
+
+    <div class="article-grid">
+
+      <div>
+        <div class="eyebrow">
+          Entender el fenómeno
+        </div>
+
+        <h2>
+          ¿Qué tiene que ver el Pacífico
+          con los ríos argentinos?
+        </h2>
+
+        <p>
+          Durante El Niño se debilitan
+          los vientos alisios y se expande
+          el agua superficial cálida por
+          el Pacífico ecuatorial central
+          y oriental.
+        </p>
+
+        <p>
+          Esa alteración modifica la circulación
+          atmosférica y puede influir
+          en las precipitaciones
+          de la Cuenca del Plata.
+        </p>
+
+        <p>
+          Es un fenómeno de interacción entre
+          el océano y la atmósfera,
+          cuyos efectos varían según la región
+          y la época del año.
+        </p>
+      </div>
+
+      <div class="explain">
+        <strong>
+          Lo que podemos decir con cuidado
+        </strong>
+
+        <p>
+          Las lluvias aguas arriba,
+          los afluentes, la gestión de embalses
+          y los tiempos de propagación
+          también influyen en los niveles.
+        </p>
+
+        <p>
+          Para explicar una crecida necesitamos
+          más que una coincidencia temporal.
+        </p>
+
+        <p class="note">
+          Fuentes de referencia:
+          Servicio Meteorológico Nacional,
+          NOAA e Instituto Nacional del Agua.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- CONEXIONES -->
+<!-- ========================= -->
+
+<section class="page" id="conexiones">
+
+  <div class="shell subhero">
+
+    <div class="eyebrow">
+      Exploración 03 / Conexiones
+    </div>
+
+    <h1>
+      Las historias detrás<br>
+      de los datos.
+    </h1>
+
+    <p>
+      El ambiente funciona como un sistema.
+
+      Acá reunimos preguntas y explicaciones
+      que ayudan a entender cómo pueden
+      relacionarse sus fenómenos,
+      sin convertir hipótesis en certezas.
+    </p>
+
+  </div>
+
+  <div class="shell section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          Historias para explorar
+        </div>
+
+        <h2>
+          Una pregunta puede<br>
+          abrir muchas capas.
+        </h2>
+      </div>
+
+      <p>
+        Sin fórmulas difíciles
+        ni conclusiones apresuradas.
+
+        Con fuentes, contexto y curiosidad.
+      </p>
+
+    </div>
+
+    <div class="steps">
+
+      <article class="step">
+        <b>01 / CLIMA + AGUA</b>
+
+        <h3>
+          ¿Cómo llega El Niño hasta nuestros ríos?
+        </h3>
+
+        <p>
+          Una historia que empieza
+          en el océano Pacífico
+          y continúa en la atmósfera
+          y las lluvias de Sudamérica.
+        </p>
+
+        <button
+          class="linkbtn"
+          data-goto="agua"
+        >
+          Explorar la explicación ↗
+        </button>
+      </article>
+
+      <article class="step">
+        <b>02 / AGUA + FUEGO</b>
+
+        <h3>
+          ¿Qué cambia cuando baja
+          el agua de un humedal?
+        </h3>
+
+        <p>
+          La exposición de suelos y vegetación
+          puede modificar las condiciones
+          para el fuego, aunque las causas
+          de ignición son otro problema.
+        </p>
+
+        <span class="pill">
+          Próxima historia
+        </span>
+      </article>
+
+      <article class="step">
+        <b>03 / TECNOLOGÍA + TERRITORIO</b>
+
+        <h3>
+          ¿Qué puede ver un satélite
+          y qué no?
+        </h3>
+
+        <p>
+          Una detección térmica es una señal.
+
+          Entender lo que significa
+          requiere más fuentes y conocimiento
+          del territorio.
+        </p>
+
+        <span class="pill">
+          Próxima historia
+        </span>
+      </article>
+
+    </div>
+
+    <div
+      class="manifesto"
+      style="margin-top:35px"
+    >
+
+      <div>
+        <div
+          class="eyebrow"
+          style="color:#c3b2ef"
+        >
+          Nuestro método
+        </div>
+
+        <h2>Tres formas de mirar.</h2>
+      </div>
+
+      <div>
+        <p>
+          <strong>Lo que observamos:</strong>
+          datos y mediciones verificables.
+        </p>
+
+        <p>
+          <strong>Lo que sabemos:</strong>
+          explicaciones científicas respaldadas.
+        </p>
+
+        <p>
+          <strong>Lo que investigamos:</strong>
+          preguntas abiertas y conexiones posibles.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ========================= -->
+<!-- PIE DE PÁGINA -->
+<!-- ========================= -->
+
+<footer class="shell footer">
+
+  <span>
+    ◉ radarambiental
+    · Detectar · Traducir · Conectar
+  </span>
+
+  <span>
+    Contacto:
+    <a
+      href="mailto:somosradarambiental@gmail.com"
+      style="
+        color:var(--purple);
+        font-weight:750;
+        text-decoration:underline;
+      "
+    >
+      somosradarambiental@gmail.com
+    </a>
+
+    <br>
+
+    <small>
+      Datos consultados mediante
+      las funciones de Netlify.
+    </small>
+  </span>
+
+</footer>
+
+<!-- Librería del mapa -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+"use strict";
+
+// ========================================
+// RADAR AMBIENTAL V5
+// Navegación y funciones compartidas
+// ========================================
+
+const $ = id => document.getElementById(id);
+
+const format = (n, decimals = 2) =>
+  Number(n).toLocaleString("es-AR", {
+    maximumFractionDigits: decimals
+  });
+
+const safe = value =>
+  String(value ?? "—").replace(
+    /[&<>"']/g,
+    c => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    })[c]
+  );
+
+function navigate(id) {
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.toggle("active", page.id === id);
+  });
+
+  document.querySelectorAll(".tab").forEach(tab => {
+    const active = tab.dataset.page === id;
+    tab.classList.toggle("active", active);
+    tab.setAttribute("aria-current", active ? "page" : "false");
+  });
+
+  history.replaceState(null, "", "#" + id);
+  window.scrollTo(0, 0);
+
+  if (id === "fuego" && map) {
+    setTimeout(() => {
+      map.invalidateSize();
+      focusMap();
+    }, 180);
+  }
 }
-function updatePanFire(){
- const total=firePoints.length;el('panFireTotal').textContent=format(total);
- const items=rankFire(firePoints).slice(0,5);el('panRanking').innerHTML=items.length?items.map(([name,n],i)=>`<div class="rank-row"><span>${i+1}. ${clean(name)}</span><div class="rank-track"><span style="width:${n/items[0][1]*100}%"></span></div><strong>${format(n)}</strong></div>`).join(''):'Sin detecciones disponibles para el período consultado.';
- el('panFireTotal').parentElement.querySelector('small').textContent='Detecciones térmicas · últimos '+el('firePeriod').value+' días';
+
+document.querySelectorAll("[data-page]").forEach(button => {
+  button.addEventListener("click", () => {
+    navigate(button.dataset.page);
+  });
+});
+
+document.querySelectorAll("[data-goto]").forEach(button => {
+  button.addEventListener("click", () => {
+    navigate(button.dataset.goto);
+  });
+});
+
+// ========================================
+// GRÁFICOS SVG
+// ========================================
+
+function clearPlot(id) {
+  $(id).innerHTML = "";
 }
-async function loadFire(){
- const req=++fireRequest,button=el('fireUpdate');button.disabled=true;el('fireStatus').textContent='Consultando NASA FIRMS…';
- try{const res=await fetch('/.netlify/functions/firms?days='+encodeURIComponent(el('firePeriod').value));const data=await res.json();if(req!==fireRequest)return;if(!res.ok)throw Error(data.error||'Error HTTP '+res.status);
- const raw=data.points||data.puntos;if(!Array.isArray(raw))throw Error('Respuesta sin listado de detecciones');
- firePoints=raw.map(p=>({latitude:Number(p.latitude??p.latitud),longitude:Number(p.longitude??p.longitud),acq_date:String(p.acq_date??p.fecha??''),acq_time:String(p.acq_time??p.hora??'').padStart(4,'0'),provincia:String(p.provincia??p.province??''),confidence:String(p.confidence??'').toLowerCase(),daynight:String(p.daynight??'').toUpperCase(),frp:p.frp==null||p.frp===''?NaN:Number(p.frp)})).filter(p=>Number.isFinite(p.latitude)&&Number.isFinite(p.longitude)&&p.acq_date&&p.provincia);
- const previous=el('fireRegion').value;el('fireRegion').innerHTML='<option value="">Toda Argentina</option>';for(const province of [...new Set(firePoints.map(p=>p.provincia))].sort((a,b)=>a.localeCompare(b,'es'))){el('fireRegion').add(new Option(province,province));}if([...el('fireRegion').options].some(o=>o.value===previous))el('fireRegion').value=previous;
- el('fireDaynight').disabled=firePoints.some(p=>!p.daynight);el('fireConfidence').disabled=firePoints.every(p=>!p.confidence);
- renderFire();updatePanFire();
- }catch(e){if(req===fireRequest){el('fireStatus').textContent='No se pudieron cargar detecciones: '+e.message;firePoints=[];el('fireTotal').textContent='Sin datos';el('panFireTotal').textContent='Sin datos';el('panRanking').textContent='Fuente no disponible';clearPlot('firePlot');if(markers)markers.clearLayers();}}
- finally{if(req===fireRequest)button.disabled=false;}
+
+function plot(id, values, bar = false) {
+  const svg = $(id);
+
+  if (!values.length) {
+    svg.innerHTML = "";
+    return;
+  }
+
+  const W = 460;
+  const H = 240;
+  const left = 43;
+  const right = 12;
+  const top = 19;
+  const bottom = 34;
+  const w = W - left - right;
+  const h = H - top - bottom;
+
+  let min = Math.min(...values);
+  let max = Math.max(...values);
+
+  if (bar) {
+    min = Math.min(min, 0);
+    max = Math.max(max, 0);
+  }
+
+  if (max === min) {
+    const pad = Math.max(0.1, Math.abs(max) * 0.05);
+    min -= pad;
+    max += pad;
+  }
+
+  const y = v => top + h - (v - min) / (max - min) * h;
+
+  let content = "";
+
+  for (let k = 0; k <= 4; k++) {
+    const yy = top + k * h / 4;
+    const tick = max - (max - min) * k / 4;
+
+    content += `
+      <line
+        x1="${left}" x2="${W - right}"
+        y1="${yy}" y2="${yy}"
+        stroke="#ece9ef"
+      />
+      <text
+        x="${left - 7}" y="${yy + 4}"
+        text-anchor="end"
+        font-size="10"
+        fill="#8a8692"
+      >${format(tick, 1)}</text>
+    `;
+  }
+
+  if (bar) {
+    const width = w / values.length * 0.62;
+
+    values.forEach((value, i) => {
+      const x = left + (i + 0.5) * w / values.length - width / 2;
+      const baseline = y(0);
+      const yy = y(value);
+
+      content += `
+        <rect
+          x="${x}"
+          y="${Math.min(baseline, yy)}"
+          width="${width}"
+          height="${Math.max(1, Math.abs(baseline - yy))}"
+          fill="${value >= 0 ? "#9275d2" : "#c4b9d7"}"
+        />
+      `;
+    });
+  } else {
+    const coords = values.map((value, i) => [
+      left + i * w / Math.max(1, values.length - 1),
+      y(value)
+    ]);
+
+    const path = coords.map((point, i) =>
+      (i ? "L" : "M") + point.join(" ")
+    ).join(" ");
+
+    content += `
+      <path
+        d="${path}"
+        stroke="#7658c4"
+        stroke-width="3"
+        fill="none"
+        stroke-linejoin="round"
+      />
+    `;
+
+    coords.forEach(([x, yy]) => {
+      content += `
+        <circle
+          cx="${x}" cy="${yy}" r="3.5"
+          fill="#7658c4"
+          stroke="white"
+          stroke-width="1.5"
+        />
+      `;
+    });
+  }
+
+  content += `
+    <text x="${left}" y="${H - 7}"
+      font-size="11" fill="#8a8692">Inicio</text>
+    <text x="${W - right}" y="${H - 7}"
+      text-anchor="end" font-size="11"
+      fill="#8a8692">Fin del período</text>
+  `;
+
+  svg.innerHTML = content;
 }
-el('fireUpdate').addEventListener('click',loadFire);el('firePeriod').addEventListener('change',loadFire);for(const id of ['fireRegion','fireConfidence','fireDaynight','fireMetric'])el(id).addEventListener('change',renderFire);
-function rowsOf(payload){const d=payload?.data;const arr=[d,d?.data,d?.datos,d?.observaciones,d?.results,d?.items,d?.observations,payload?.observaciones].find(Array.isArray)||[];return arr.map(r=>({date:String(r.timestart??r.timeStart??r.fecha??r.date??r.timestamp??r.time??r.time_start??''),value:Number(r.valor??r.value??r.val??r.observation??r.result??r.valor_observado)})).filter(r=>r.date&&Number.isFinite(r.value)).sort((a,b)=>a.date.localeCompare(b.date));}
-function populateStations(){const river=el('waterRiver').value,old=el('waterStation').value;el('waterStation').innerHTML='';const used=new Set();for(const o of inaOptions.filter(o=>(o.river||'Estaciones por verificar')===river).sort((a,b)=>a.station.localeCompare(b.station,'es'))){if(used.has(String(o.id)))continue;used.add(String(o.id));el('waterStation').add(new Option(o.station+' · '+(o.variable||'Nivel'),String(o.id)));}if([...el('waterStation').options].some(o=>o.value===old))el('waterStation').value=old;}
-async function catalog(){try{const res=await fetch('/.netlify/functions/ina?action=catalog');const data=await res.json();if(!res.ok)throw Error(data.error||'Error HTTP '+res.status);inaOptions=Array.isArray(data.options)?data.options:[];if(!inaOptions.length)throw Error(data.warning||'No se encontraron estaciones');const rivers=[...new Set(inaOptions.map(o=>o.river||'Estaciones por verificar'))].sort((a,b)=>a.localeCompare(b,'es'));el('waterRiver').innerHTML='';for(const r of rivers)el('waterRiver').add(new Option(r,r));populateStations();el('waterStatus').textContent='Catálogo INA disponible · '+inaOptions.length+' series identificadas. Elegí una estación para consultar.';}catch(e){el('waterStatus').textContent='No se pudo cargar el catálogo INA: '+e.message;el('waterStation').innerHTML='<option value="">Sin estaciones</option>';}}
-function renderWater(rows,station){
- const unit=station.unit||'m',last=rows.at(-1),first=rows[0],previous=rows.at(-2);
- el('waterLatest').textContent=format(last.value)+' '+unit;
- el('waterChange').textContent=previous?(last.value-previous.value>=0?'+':'')+format(last.value-previous.value)+' '+unit:'Sin comparación';
- plot('waterPlot',rows.map(r=>r.value));if(rows.length>1)plot('waterChangePlot',rows.slice(1).map((r,i)=>r.value-rows[i].value),true);else clearPlot('waterChangePlot');
- const delta=last.value-first.value;const minChange=0.01;const trend=rows.length<2?'Sin datos':delta>minChange?'Creciente ↗':delta< -minChange?'Bajante ↘':'Estable →';
- el('panWaterTrend').textContent=trend;el('panWaterDetail').textContent=station.station+' · '+rows.length+' observaciones · '+first.date.slice(0,10)+' al '+last.date.slice(0,10)+' · cambio '+(delta>=0?'+':'')+format(delta)+' '+unit+'. Umbral descriptivo: ±0,01 '+unit+'.';
- plot('panWaterPlot',rows.map(r=>r.value));el('waterStatus').textContent=rows.length+' observaciones · '+station.station+' · última fecha: '+last.date.slice(0,10)+'. La tendencia describe solo esta estación y este período.';
+
+// ========================================
+// FUEGO - NASA FIRMS
+// ========================================
+
+let firePoints = [];
+let fireRequest = 0;
+let map = null;
+let markers = null;
+
+try {
+  if (typeof L !== "undefined") {
+    map = L.map("liveMap").setView([-38.5, -64.5], 4);
+
+    const tiles = L.tileLayer(
+      "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      {
+        attribution: "© OpenStreetMap contributors · © CARTO",
+        subdomains: "abcd",
+        maxZoom: 18
+      }
+    ).addTo(map);
+
+    tiles.on("tileerror", () => {
+      $("mapNote").hidden = false;
+    });
+
+    markers = L.featureGroup().addTo(map);
+  }
+} catch (error) {
+  $("fireStatus").textContent =
+    "No se pudo inicializar el mapa: " + error.message;
 }
-async function loadWater(){const id=el('waterStation').value;if(!/^\d+$/.test(id)){el('waterStatus').textContent='Elegí una estación.';return;}const btn=el('waterUpdate');btn.disabled=true;el('waterStatus').textContent='Consultando INA…';try{const res=await fetch('/.netlify/functions/ina?seriesId='+encodeURIComponent(id)+'&days='+encodeURIComponent(el('waterPeriod').value));const data=await res.json();if(!res.ok)throw Error(data.error||'Error HTTP '+res.status);const rows=rowsOf(data);if(!rows.length)throw Error(data.warning||'No hay mediciones interpretables para este período');const station=inaOptions.find(o=>String(o.id)===id)||{station:'Estación seleccionada',unit:'m'};renderWater(rows,station);}catch(e){el('waterStatus').textContent='Sin mediciones disponibles: '+e.message;el('waterLatest').textContent='Sin datos';el('waterChange').textContent='Sin datos';el('panWaterTrend').textContent='Sin datos';el('panWaterDetail').textContent='No se pudo calcular una tendencia para la estación y período seleccionados.';['waterPlot','waterChangePlot','panWaterPlot'].forEach(clearPlot);}finally{btn.disabled=false;}}
-el('waterRiver').addEventListener('change',populateStations);el('waterStation').addEventListener('change',loadWater);el('waterPeriod').addEventListener('change',loadWater);el('waterUpdate').addEventListener('click',loadWater);
-if(['inicio','panorama','fuego','agua','conexiones'].includes(location.hash.slice(1)))go(location.hash.slice(1));
-loadFire();catalog();
-</script></body></html>
+
+function focusMap() {
+  if (!map || !markers) return;
+
+  if (
+    markers.getLayers().length &&
+    markers.getBounds().isValid()
+  ) {
+    map.fitBounds(markers.getBounds().pad(0.25), {
+      maxZoom: 9
+    });
+  } else {
+    map.setView([-38.5, -64.5], 4);
+  }
+}
+
+function fireFiltered() {
+  return firePoints.filter(p =>
+    (!$("fireRegion").value ||
+      p.provincia === $("fireRegion").value) &&
+    (!$("fireConfidence").value ||
+      p.confidence === $("fireConfidence").value) &&
+    (!$("fireDaynight").value ||
+      p.daynight === $("fireDaynight").value)
+  );
+}
+
+function rankFire(points) {
+  const counts = {};
+
+  for (const p of points) {
+    counts[p.provincia] = (counts[p.provincia] || 0) + 1;
+  }
+
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1]);
+}
+
+function renderFire() {
+  const points = fireFiltered();
+  const isFrp = $("fireMetric").value === "frp";
+
+  const total = isFrp
+    ? points.reduce(
+        (sum, p) => sum + (Number.isFinite(p.frp) ? p.frp : 0),
+        0
+      )
+    : points.length;
+
+  $("fireTotal").textContent = format(total, isFrp ? 1 : 0);
+
+  $("fireTotalLabel").textContent = isFrp
+    ? "FRP acumulada (MW)"
+    : "Detecciones satelitales";
+
+  $("fireMetricNote").textContent = isFrp
+    ? "Potencia radiativa estimada; no es cantidad de incendios."
+    : "Registros satelitales, no eventos únicos.";
+
+  $("firePlotDescription").textContent = isFrp
+    ? "FRP acumulada (MW) por fecha."
+    : "Cantidad de detecciones por fecha.";
+
+  $("fireDays").textContent = $("firePeriod").value + " días";
+
+  if (markers) {
+    markers.clearLayers();
+
+    for (const p of points) {
+      const radius = isFrp
+        ? Math.max(
+            7,
+            Math.min(
+              18,
+              6 + Math.sqrt(Math.max(0, p.frp || 0)) * 0.75
+            )
+          )
+        : 7;
+
+      L.circleMarker(
+        [p.latitude, p.longitude],
+        {
+          radius,
+          color: "#402078",
+          fillColor: "#b34cdb",
+          fillOpacity: 0.95,
+          weight: 2
+        }
+      ).bindPopup(`
+        <strong>Detección térmica</strong>
+        <br>Provincia: ${safe(p.provincia)}
+        <br>Fecha: ${safe(p.acq_date)}
+        <br>Hora UTC: ${safe(p.acq_time)}
+        <br>FRP: ${safe(
+          Number.isFinite(p.frp) ? p.frp : "Sin dato"
+        )} MW
+      `).addTo(markers);
+    }
+
+    if ($("fuego").classList.contains("active")) {
+      map.invalidateSize();
+      focusMap();
+    }
+  }
+
+  const days = Number($("firePeriod").value);
+
+  const dates = Array.from({ length: days }, (_, i) => {
+    const d = new Date();
+    d.setUTCDate(d.getUTCDate() - (days - 1 - i));
+    return d.toISOString().slice(0, 10);
+  });
+
+  const values = dates.map(date =>
+    points
+      .filter(p => p.acq_date === date)
+      .reduce(
+        (sum, p) =>
+          sum + (
+            isFrp
+              ? (Number.isFinite(p.frp) ? p.frp : 0)
+              : 1
+          ),
+        0
+      )
+  );
+
+  plot("firePlot", values, true);
+
+  $("fireStatus").textContent =
+    format(firePoints.length, 0) +
+    " detecciones recibidas · " +
+    format(points.length, 0) +
+    " visibles. " +
+    (isFrp ? "FRP expresada en MW." : "Conteo de detecciones.");
+}
+
+function updatePanFire() {
+  $("panFireTotal").textContent = format(firePoints.length, 0);
+
+  const ranking = rankFire(firePoints).slice(0, 5);
+
+  $("panRanking").innerHTML = ranking.length
+    ? ranking.map(([name, count], i) => `
+        <div class="rank-row">
+          <span>${i + 1}. ${safe(name)}</span>
+          <div class="rank-track">
+            <span style="width:${
+              count / ranking[0][1] * 100
+            }%"></span>
+          </div>
+          <strong>${format(count, 0)}</strong>
+        </div>
+      `).join("")
+    : "No se recibieron detecciones para el período.";
+
+  $("panFireTotal").parentElement
+    .querySelector("small").textContent =
+      "Detecciones térmicas · últimos " +
+      $("firePeriod").value + " días";
+}
+
+async function loadFire() {
+  const request = ++fireRequest;
+  const button = $("fireUpdate");
+
+  button.disabled = true;
+  $("fireStatus").textContent = "Consultando NASA FIRMS…";
+
+  try {
+    const res = await fetch(
+      "/.netlify/functions/firms?days=" +
+      encodeURIComponent($("firePeriod").value)
+    );
+
+    const data = await res.json();
+
+    if (request !== fireRequest) return;
+
+    if (!res.ok) {
+      throw new Error(data.error || "Error HTTP " + res.status);
+    }
+
+    const raw = data.points || data.puntos;
+
+    if (!Array.isArray(raw)) {
+      throw new Error("La API no devolvió detecciones.");
+    }
+
+    firePoints = raw.map(p => ({
+      latitude: Number(p.latitude ?? p.latitud),
+      longitude: Number(p.longitude ?? p.longitud),
+      acq_date: String(p.acq_date ?? p.fecha ?? ""),
+      acq_time: String(p.acq_time ?? p.hora ?? "")
+        .padStart(4, "0"),
+      provincia: String(p.provincia ?? p.province ?? ""),
+      confidence: String(p.confidence ?? "").toLowerCase(),
+      daynight: String(p.daynight ?? "").toUpperCase(),
+      frp: p.frp == null || p.frp === ""
+        ? NaN
+        : Number(p.frp)
+    })).filter(p =>
+      Number.isFinite(p.latitude) &&
+      Number.isFinite(p.longitude) &&
+      p.acq_date &&
+      p.provincia
+    );
+
+    const previous = $("fireRegion").value;
+
+    $("fireRegion").innerHTML =
+      '<option value="">Toda Argentina</option>';
+
+    const provinces = [...new Set(
+      firePoints.map(p => p.provincia)
+    )].sort((a, b) => a.localeCompare(b, "es"));
+
+    for (const province of provinces) {
+      $("fireRegion").add(new Option(province, province));
+    }
+
+    if (provinces.includes(previous)) {
+      $("fireRegion").value = previous;
+    }
+
+    $("fireDaynight").disabled =
+      firePoints.some(p => !p.daynight);
+
+    $("fireConfidence").disabled =
+      firePoints.every(p => !p.confidence);
+
+    renderFire();
+    updatePanFire();
+
+  } catch (error) {
+    if (request === fireRequest) {
+      firePoints = [];
+      $("fireStatus").textContent =
+        "No se pudieron cargar los datos: " + error.message;
+      $("fireTotal").textContent = "Sin datos";
+      $("panFireTotal").textContent = "Sin datos";
+      $("panRanking").textContent = "Fuente no disponible";
+      clearPlot("firePlot");
+
+      if (markers) markers.clearLayers();
+    }
+  } finally {
+    if (request === fireRequest) button.disabled = false;
+  }
+}
+
+$("fireUpdate").addEventListener("click", loadFire);
+$("firePeriod").addEventListener("change", loadFire);
+
+for (const id of [
+  "fireRegion",
+  "fireConfidence",
+  "fireDaynight",
+  "fireMetric"
+]) {
+  $(id).addEventListener("change", renderFire);
+}
+
+// ========================================
+// AGUA - INSTITUTO NACIONAL DEL AGUA
+// ========================================
+
+let inaOptions = [];
+let waterRequest = 0;
+
+const panoramaCache = new Map();
+
+function rowsOf(payload) {
+  const d = payload?.data;
+
+  const candidates = [
+    d,
+    d?.data,
+    d?.datos,
+    d?.observaciones,
+    d?.results,
+    d?.items,
+    d?.observations,
+    payload?.observaciones
+  ];
+
+  const array = candidates.find(Array.isArray) || [];
+
+  return array.map(r => {
+    const date = r.timestart ??
+      r.timeStart ??
+      r.fecha ??
+      r.date ??
+      r.timestamp ??
+      r.time ??
+      r.time_start;
+
+    const value = r.valor ??
+      r.value ??
+      r.val ??
+      r.observation ??
+      r.result ??
+      r.valor_observado;
+
+    return {
+      date: String(date ?? ""),
+      value: value === "" || value == null
+        ? NaN
+        : Number(value)
+    };
+  }).filter(r =>
+    r.date && Number.isFinite(r.value)
+  ).sort((a, b) => a.date.localeCompare(b.date));
+}
+
+function populateStations() {
+  const river = $("waterRiver").value;
+  const previous = $("waterStation").value;
+  const select = $("waterStation");
+
+  select.innerHTML = "";
+
+  const options = inaOptions
+    .filter(o =>
+      (o.river || "Estaciones por verificar") === river
+    )
+    .sort((a, b) =>
+      a.station.localeCompare(b.station, "es")
+    );
+
+  const used = new Set();
+
+  for (const o of options) {
+    if (used.has(String(o.id))) continue;
+
+    used.add(String(o.id));
+
+    select.add(
+      new Option(
+        o.station + " · " + (o.variable || "Nivel"),
+        String(o.id)
+      )
+    );
+  }
+
+  if ([...select.options].some(o => o.value === previous)) {
+    select.value = previous;
+  }
+
+  const current = inaOptions.find(
+    o => String(o.id) === select.value
+  );
+
+  $("waterHint").textContent = current
+    ? "Estación: " + current.station +
+      " · " + (current.river || "Río sin confirmar") +
+      " · última fecha declarada en catálogo: " +
+      (current.toDate || "No informada") +
+      ". El nivel es local, no un promedio del río."
+    : "Elegí una estación para consultar sus mediciones.";
+}
+
+async function loadCatalog() {
+  try {
+    const res = await fetch(
+      "/.netlify/functions/ina?action=catalog"
+    );
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error || "Error HTTP " + res.status);
+    }
+
+    inaOptions = Array.isArray(data.options)
+      ? data.options
+      : [];
+
+    if (!inaOptions.length) {
+      throw new Error(
+        data.warning || "No se encontraron estaciones."
+      );
+    }
+
+    const rivers = [...new Set(
+      inaOptions.map(
+        o => o.river || "Estaciones por verificar"
+      )
+    )].sort((a, b) => a.localeCompare(b, "es"));
+
+    $("waterRiver").innerHTML = "";
+
+    for (const river of rivers) {
+      $("waterRiver").add(new Option(river, river));
+    }
+
+    populateStations();
+
+    $("waterStatus").textContent =
+      "Catálogo INA disponible · " +
+      inaOptions.length +
+      " series identificadas. Elegí una estación.";
+
+    loadPanoramaWater();
+
+  } catch (error) {
+    $("waterStatus").textContent =
+      "No se pudo cargar el catálogo INA: " + error.message;
+
+    $("waterStation").innerHTML =
+      '<option value="">Sin estaciones</option>';
+
+    $("panWaterTrend").textContent = "Sin cobertura";
+    $("panWaterList").textContent =
+      "No se pudo consultar el catálogo de estaciones.";
+  }
+}
+
+function renderWater(rows, station) {
+  const unit = station.unit || "m";
+  const last = rows.at(-1);
+  const previous = rows.at(-2);
+
+  $("waterLatest").textContent =
+    format(last.value) + " " + unit;
+
+  $("waterChange").textContent = previous
+    ? (last.value - previous.value >= 0 ? "+" : "") +
+      format(last.value - previous.value) + " " + unit
+    : "Sin comparación";
+
+  plot("waterPlot", rows.map(r => r.value));
+
+  if (rows.length > 1) {
+    plot(
+      "waterChangePlot",
+      rows.slice(1).map(
+        (r, i) => r.value - rows[i].value
+      ),
+      true
+    );
+  } else {
+    clearPlot("waterChangePlot");
+  }
+
+  $("waterStatus").textContent =
+    rows.length + " observaciones · " +
+    station.station +
+    " · última fecha: " +
+    last.date.slice(0, 10) +
+    ". El nivel corresponde únicamente a esta estación.";
+}
+
+async function loadWater() {
+  const id = $("waterStation").value;
+
+  if (!/^\d+$/.test(id)) {
+    $("waterStatus").textContent =
+      "Elegí una estación disponible.";
+    return;
+  }
+
+  const request = ++waterRequest;
+  const button = $("waterUpdate");
+
+  button.disabled = true;
+  $("waterStatus").textContent = "Consultando INA…";
+
+  try {
+    const days = $("waterPeriod").value;
+
+    const res = await fetch(
+      "/.netlify/functions/ina?seriesId=" +
+      encodeURIComponent(id) +
+      "&days=" + encodeURIComponent(days)
+    );
+
+    const data = await res.json();
+
+    if (request !== waterRequest) return;
+
+    if (!res.ok) {
+      throw new Error(data.error || "Error HTTP " + res.status);
+    }
+
+    const rows = rowsOf(data);
+
+    if (!rows.length) {
+      throw new Error(
+        data.warning ||
+        "No hay mediciones para este período."
+      );
+    }
+
+    const station = inaOptions.find(
+      o => String(o.id) === id
+    ) || {
+      station: "Estación seleccionada",
+      unit: "m"
+    };
+
+    renderWater(rows, station);
+
+  } catch (error) {
+    if (request !== waterRequest) return;
+
+    $("waterStatus").textContent =
+      "Sin mediciones disponibles: " + error.message;
+
+    $("waterLatest").textContent = "Sin datos";
+    $("waterChange").textContent = "Sin datos";
+
+    clearPlot("waterPlot");
+    clearPlot("waterChangePlot");
+
+  } finally {
+    if (request === waterRequest) button.disabled = false;
+  }
+}
+
+// ========================================
+// PANORAMA - ESTACIONES DE REFERENCIA
+// ========================================
+
+const riverTargets = [
+  {
+    river: "Río Paraná",
+    places: [
+      /^corrientes\b/i,
+      /^rosario\b/i,
+      /^paran[aá]\b/i,
+      /^posadas\b/i
+    ]
+  },
+  {
+    river: "Río Uruguay",
+    places: [
+      /^concordia\b/i,
+      /^paso de los libres\b/i,
+      /^monte caseros\b/i
+    ]
+  },
+  {
+    river: "Río Paraguay",
+    places: [
+      /^formosa\b/i,
+      /^clorinda\b/i
+    ]
+  },
+  {
+    river: "Río Iguazú",
+    places: [
+      /^puerto iguaz[uú]\b/i,
+      /^iguaz[uú]\b/i
+    ]
+  }
+];
+
+function candidatesFor(target) {
+  const found = inaOptions.filter(
+    o => o.river === target.river
+  );
+
+  const chosen = [];
+
+  for (const pattern of target.places) {
+    const matches = found.filter(
+      o => pattern.test(o.station)
+    ).sort((a, b) =>
+      String(b.toDate || "").localeCompare(
+        String(a.toDate || "")
+      ) ||
+      Number(b.obsCount || 0) - Number(a.obsCount || 0)
+    );
+
+    const match = matches[0];
+
+    if (
+      match &&
+      !chosen.some(o => o.station === match.station)
+    ) {
+      chosen.push(match);
+    }
+  }
+
+  return chosen;
+}
+
+async function stationHistory(station) {
+  const key = String(station.id);
+
+  if (panoramaCache.has(key)) {
+    return panoramaCache.get(key);
+  }
+
+  const res = await fetch(
+    "/.netlify/functions/ina?seriesId=" +
+    encodeURIComponent(key) +
+    "&days=7"
+  );
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw new Error(data.error || "Consulta no disponible");
+  }
+
+  const rows = rowsOf(data);
+  panoramaCache.set(key, rows);
+
+  return rows;
+}
+
+function stationTrend(rows) {
+  if (rows.length < 2) {
+    return {
+      label: "Sin serie",
+      delta: null
+    };
+  }
+
+  const first = rows[0];
+  const last = rows.at(-1);
+
+  const start = Date.parse(first.date);
+  const end = Date.parse(last.date);
+
+  if (
+    !Number.isFinite(start) ||
+    !Number.isFinite(end) ||
+    end - start < 24 * 3600000
+  ) {
+    return {
+      label: "Datos insuficientes",
+      delta: null
+    };
+  }
+
+  if (Date.now() - end > 72 * 3600000) {
+    return {
+      label: "Datos no recientes",
+      delta: null
+    };
+  }
+
+  const delta = last.value - first.value;
+
+  return {
+    label:
+      delta > 0.05
+        ? "Creciente ↗"
+        : delta < -0.05
+          ? "Bajante ↘"
+          : "Estable →",
+    delta
+  };
+}
+
+function openStation(id) {
+  const station = inaOptions.find(
+    o => String(o.id) === String(id)
+  );
+
+  if (!station) return;
+
+  $("waterRiver").value = station.river;
+  populateStations();
+
+  $("waterStation").value = String(id);
+  $("waterPeriod").value = "7";
+
+  navigate("agua");
+  loadWater();
+}
+
+async function loadPanoramaWater() {
+  const host = $("panWaterList");
+
+  host.textContent =
+    "Consultando estaciones de referencia…";
+
+  const choices = riverTargets.flatMap(target =>
+    candidatesFor(target).slice(0, 2)
+  ).slice(0, 6);
+
+  if (!choices.length) {
+    host.textContent =
+      "No se identificaron estaciones de referencia.";
+
+    $("panWaterTrend").textContent = "Sin cobertura";
+    return;
+  }
+
+  const results = await Promise.all(
+    choices.map(async station => {
+      try {
+        const rows = await stationHistory(station);
+
+        return {
+          station,
+          rows,
+          trend: stationTrend(rows)
+        };
+      } catch (error) {
+        return {
+          station,
+          rows: [],
+          trend: {
+            label: "No disponible",
+            delta: null
+          }
+        };
+      }
+    })
+  );
+
+  host.innerHTML = "";
+
+  let valid = 0;
+
+  for (const { station, rows, trend } of results) {
+    if ([
+      "Creciente ↗",
+      "Bajante ↘",
+      "Estable →"
+    ].includes(trend.label)) {
+      valid++;
+    }
+
+    const item = document.createElement("div");
+    item.className = "river-item";
+
+    const left = document.createElement("div");
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent =
+      station.river + " · " + station.station;
+
+    button.addEventListener("click", () => {
+      openStation(station.id);
+    });
+
+    const small = document.createElement("small");
+
+    small.textContent = rows.length
+      ? "Última observación: " +
+        rows.at(-1).date.slice(0, 10) +
+        " · " + rows.length + " registros"
+      : "Sin mediciones disponibles";
+
+    left.appendChild(button);
+    left.appendChild(small);
+
+    const right = document.createElement("span");
+    right.className = "river-trend";
+    right.textContent = trend.label;
+
+    item.appendChild(left);
+    item.appendChild(right);
+
+    host.appendChild(item);
+  }
+
+  $("panWaterTrend").textContent =
+    valid + " de " + results.length +
+    " con tendencia";
+
+  $("panWaterDetail").textContent =
+    "Estaciones de referencia del INA · " +
+    "ventana de 7 días · mínimo 24 horas entre " +
+    "observaciones · dato reciente de hasta 72 horas · " +
+    "umbral descriptivo ±0,05 m. " +
+    "No equivale a una alerta hidrológica.";
+}
+
+// ========================================
+// EVENTOS DE AGUA
+// ========================================
+
+$("waterRiver").addEventListener(
+  "change",
+  populateStations
+);
+
+$("waterStation").addEventListener(
+  "change",
+  loadWater
+);
+
+$("waterPeriod").addEventListener(
+  "change",
+  loadWater
+);
+
+$("waterUpdate").addEventListener(
+  "click",
+  loadWater
+);
+
+// ========================================
+// INICIALIZACIÓN
+// ========================================
+
+const initialPage = location.hash.slice(1);
+
+if ([
+  "inicio",
+  "panorama",
+  "fuego",
+  "agua",
+  "conexiones"
+].includes(initialPage)) {
+  navigate(initialPage);
+}
+
+loadFire();
+loadCatalog();
+
+</script>
+</body>
+</html>
